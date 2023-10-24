@@ -52,7 +52,7 @@ struct TriangleTopLeft: Shape {
         //side one
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
         //side two
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         //side three
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
         //return the path
