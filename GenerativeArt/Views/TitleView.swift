@@ -7,34 +7,33 @@
 
 import SwiftUI
 
-//create shape structure
-
-
 struct TitleView: View {
+    //MARK: stored properties
+    let coinFlipOne = Int.random(in: 1...2)
+    //MARK: Computer properties
     var body: some View {
-        VStack {
-//            let coinFlipOne = Int.random(in: 1...2)
-//            
-//            if coinFlipOne == 1{
+        ZStack {
+            if coinFlipOne == 1{
                 TriangleTopRight()
                 .stroke(.blue)
                 .fill(.blue)
                 .aspectRatio(1.0, contentMode: .fit)
                     
-//            } else {
                 TriangleBottomLeft()
                 .stroke(.blue)
                 .fill(.blue)
                 .aspectRatio(1.0, contentMode: .fit)
-//            }
-            TriangleTopLeft()
-                .stroke(.blue)
-                .fill(.blue)
-                .aspectRatio(1.0, contentMode: .fit)
-            TriangleBottomRight()
-                .stroke(.blue)
-                .fill(.blue)
-                .aspectRatio(1.0, contentMode: .fit)
+            } else {
+                TriangleTopLeft()
+                    .stroke(.blue)
+                    .fill(.blue)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+                TriangleBottomRight()
+                    .stroke(.blue)
+                    .fill(.blue)
+                    .aspectRatio(1.0, contentMode: .fit)
+            }
         }
         .padding()
     }
