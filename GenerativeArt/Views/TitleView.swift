@@ -44,20 +44,39 @@ struct TriangleBottomLeft: Shape {
     }
 }
 
+struct TriangleTopLeft: Shape {
+    func path(in rect: CGRect) -> Path {
+        //make an empty path
+        var path = Path()
+        //define path
+        path.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        //side one
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        //side two
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        //side three
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        //return the path
+        return path
+    }
+}
+
 
 struct TitleView: View {
     var body: some View {
         VStack {
-            let coinFlipOne = Int.random(in: 1...2)
-            
-            if coinFlipOne == 1{
-                TriangleTopRight()
-                //make the shape to be a square
-                    .aspectRatio(1.0, contentMode: .fit)
-            } else {
-                TriangleBottomLeft()
-                    .aspectRatio(1.0, contentMode: .fit)
-            }
+//            let coinFlipOne = Int.random(in: 1...2)
+//            
+//            if coinFlipOne == 1{
+//                TriangleTopRight()
+//                //make the shape to be a square
+//                    .aspectRatio(1.0, contentMode: .fit)
+//            } else {
+//                TriangleBottomLeft()
+//                    .aspectRatio(1.0, contentMode: .fit)
+//            }
+//            TriangleTopLeft()
+//                .aspectRatio(1.0, contentMode: .fit)
         }
         .padding()
     }
