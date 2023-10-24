@@ -85,16 +85,24 @@ struct TitleView: View {
 //            
 //            if coinFlipOne == 1{
                 TriangleTopRight()
-//                //make the shape to be a square
-                    .aspectRatio(1.0, contentMode: .fit)
+                .stroke(.blue)
+                .fill(.blue)
+                .aspectRatio(1.0, contentMode: .fit)
+                    
 //            } else {
                 TriangleBottomLeft()
-                    .aspectRatio(1.0, contentMode: .fit)
+                .stroke(.blue)
+                .fill(.blue)
+                .aspectRatio(1.0, contentMode: .fit)
 //            }
             TriangleTopLeft()
+                .stroke(.blue)
+                .fill(.blue)
                 .aspectRatio(1.0, contentMode: .fit)
             TriangleBottomRight()
-                            .aspectRatio(1.0, contentMode: .fit)
+                .stroke(.blue)
+                .fill(.blue)
+                .aspectRatio(1.0, contentMode: .fit)
         }
         .padding()
     }
