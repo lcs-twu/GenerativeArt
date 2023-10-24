@@ -12,6 +12,7 @@
 		81245DEC2AE81A7A00560FDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81245DEB2AE81A7A00560FDA /* Preview Assets.xcassets */; };
 		81245DF62AE81D3100560FDA /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81245DF52AE81D3100560FDA /* TitleView.swift */; };
 		81245DF82AE81D5500560FDA /* MosaicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81245DF72AE81D5500560FDA /* MosaicView.swift */; };
+		81245DFB2AE8261B00560FDA /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81245DFA2AE8261B00560FDA /* Shape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		81245DED2AE81A7A00560FDA /* GenerativeArt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GenerativeArt.entitlements; sourceTree = "<group>"; };
 		81245DF52AE81D3100560FDA /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		81245DF72AE81D5500560FDA /* MosaicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MosaicView.swift; sourceTree = "<group>"; };
+		81245DFA2AE8261B00560FDA /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				81245DE42AE81A7800560FDA /* GenerativeArtApp.swift */,
+				81245DF92AE825ED00560FDA /* Helpers */,
 				81245DF32AE81CE600560FDA /* Views */,
 				81245DE82AE81A7A00560FDA /* Assets.xcassets */,
 				81245DED2AE81A7A00560FDA /* GenerativeArt.entitlements */,
@@ -78,6 +81,14 @@
 				81245DF72AE81D5500560FDA /* MosaicView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81245DF92AE825ED00560FDA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81245DFA2AE8261B00560FDA /* Shape.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 				81245DE52AE81A7800560FDA /* GenerativeArtApp.swift in Sources */,
 				81245DF82AE81D5500560FDA /* MosaicView.swift in Sources */,
 				81245DF62AE81D3100560FDA /* TitleView.swift in Sources */,
+				81245DFB2AE8261B00560FDA /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
