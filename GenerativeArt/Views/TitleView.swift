@@ -24,29 +24,54 @@ enum Coin: Int {
 
 struct TitleView: View {
     //MARK: stored properties
-    let coinFlipOne = Int.random(in: 1...2)
+    let coinFlipOne = Coin.heads //temporary to test colors
+    //choosing markers
+    let markerOne = Color.blue
+    let markerTwo = Color.orange
+    
+    //decide on colors
+    let flipForColor = Coin.flip()
+    
     //MARK: Computer properties
+    
+    //set colors based on coin flip
+    var colorOne: Color {
+        if flipForColor == .heads {
+            return markerOne
+        } else {
+            return markerTwo
+        }
+    }
+    
+    var colorTwo: Color {
+        if flipForColor == .heads {
+            return markerTwo
+        } else {
+            return markerOne
+        }
+    }
+    
     var body: some View {
         ZStack {
             if coinFlipOne == .heads {
                 TriangleTopRight()
-                .stroke(.blue)
-                .fill(.blue)
+                .stroke(.black)
+                .fill(colorOne)
                 .aspectRatio(1.0, contentMode: .fit)
                     
                 TriangleBottomLeft()
-                .stroke(.blue)
-                .fill(.blue)
+                .stroke(.black)
+                .fill(colorTwo)
                 .aspectRatio(1.0, contentMode: .fit)
             } else {
                 TriangleTopLeft()
-                    .stroke(.blue)
-                    .fill(.blue)
+                    .stroke(.black)
+                    .fill(.clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 TriangleBottomRight()
-                    .stroke(.blue)
-                    .fill(.blue)
+                    .stroke(.black)
+                    .fill(.clear)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
