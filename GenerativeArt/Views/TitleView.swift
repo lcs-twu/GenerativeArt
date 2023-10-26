@@ -24,13 +24,19 @@ enum Coin: Int {
 
 struct TitleView: View {
     //MARK: stored properties
-    let coinFlipOne = Coin.heads //temporary to test colors
+    
+    //determine diagonal
+    let coinFlipOne = Coin.tails //temporary to test colors
+    
+    //determine whether top or bottom triangle gets filled with color 1
+    let coinFlipTwo = Coin.flip()
+    
     //choosing markers
     let markerOne = Color.blue
     let markerTwo = Color.orange
     
     //decide on colors
-    let flipForColor = Coin.flip()
+    let flipForColor = Coin.tails
     
     //MARK: Computer properties
     
@@ -48,22 +54,23 @@ struct TitleView: View {
             if coinFlipOne == .heads {
                 TriangleTopRight()
                 .stroke(.black)
-                .fill(colorOne)
+                //color one or clear
+                .fill(coinFlipTwo == .heads ? colorOne : .clear)
                 .aspectRatio(1.0, contentMode: .fit)
                     
                 TriangleBottomLeft()
                 .stroke(.black)
-                .fill(colorTwo)
+                .fill(coinFlipTwo == .tails ? colorOne : .clear)
                 .aspectRatio(1.0, contentMode: .fit)
             } else {
                 TriangleTopLeft()
                     .stroke(.black)
-                    .fill(.clear)
+                    .fill(coinFlipTwo == .heads ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 TriangleBottomRight()
                     .stroke(.black)
-                    .fill(.clear)
+                    .fill(coinFlipTwo == .tails ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
