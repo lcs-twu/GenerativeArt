@@ -49,7 +49,7 @@ struct TitleView: View {
     }
     
     var colorTwo: Color {
-        return flipForColor == .heads ? markerTwo : markerOne
+        return flipForColor == .tails ? markerOne : markerTwo
     }
     
     //determine fill color for remaining triangle
