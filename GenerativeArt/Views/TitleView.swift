@@ -82,7 +82,6 @@ struct TitleView: View {
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
-        .padding()
     }
 }
 
