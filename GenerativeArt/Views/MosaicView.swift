@@ -26,9 +26,15 @@ struct MosaicView: View {
                     }
                 }
             }
-            
-            Slider(value: $columns, in: 1...10, step: 1.0)
-            Slider(value: $rows, in: 1...10, step: 1.0)
+            HStack{
+                Text("columns")
+                Slider(value: $columns, in: 1...10, step: 1.0)
+            }
+            HStack{
+                Spacer(minLength: 22)
+                Text("rows")
+                Slider(value: $rows, in: 1...10, step: 1.0)
+            }
         }
     }
 }
