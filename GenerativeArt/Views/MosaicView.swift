@@ -10,10 +10,12 @@ import SwiftUI
 struct MosaicView: View {
     var body: some View {
         Grid(horizontalSpacing: 0, verticalSpacing: 0) {
-            GridRow {
-                TitleView()
-                TitleView()
-                TitleView()
+            ForEach(1..<4){i in
+                GridRow {
+                    ForEach(1..<4){i in
+                        TitleView()
+                    }
+                }
             }
         }
     }
