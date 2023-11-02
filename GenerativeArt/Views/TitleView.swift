@@ -49,12 +49,17 @@ struct TitleView: View {
     }
     
     var colorTwo: Color {
-        return flipForColor == .tails ? markerOne : markerTwo
+        return flipForColor == .heads ? markerTwo : markerOne
     }
     
     //determine fill color for remaining triangle
     var remainingTriangleFillColor: Color {
-        return coinFlipThree == .heads ? markerTwo : .clear
+        return coinFlipThree == .heads ? colorTwo : .clear
+//        if coinFlipThree == .heads {
+//            return colorTwo
+//        } else {
+//            return .clear
+//        }
     }
     
     var body: some View {
